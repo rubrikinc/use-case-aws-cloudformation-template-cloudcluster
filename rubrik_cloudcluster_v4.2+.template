@@ -1,0 +1,210 @@
+{
+    "Parameters" : {
+        "AvailabilityZone" : {
+            "Type" : "AWS::EC2::AvailabilityZone::Name",
+            "Description" : "Availability Zone that CloudCluster will run in."
+        },
+        "ClusterNameTag" : {
+            "Type" : "String",
+            "Default" : "Rubrik-CloudCluster",
+            "Description" : "Enter the Name tag to be used for the Rubrik CloudCluster nodes in AWS."
+        },
+        "ImageID" : {
+            "Type" : "AWS::EC2::Image::Id",
+            "Default" : "ami-6bd0ab13",
+            "Description" : "AMI ID of the Rubrik CloudCluster image shared by Rubrik. Should be something like: rubrik-4-1-1-p2-2263."
+        },
+         "SecurityGroupIds" : {
+            "Type" : "List<AWS::EC2::SecurityGroup::Id>",
+            "Description" : "Security Group(s) to apply to Rubrik CloudCluster."
+        
+        },
+        "SubnetId" : {
+            "Type" : "AWS::EC2::Subnet::Id",
+            "Description" : "VPC Subnet into which Rubrik CloudCluster will be deployed."
+        }
+    },
+    "AWSTemplateFormatVersion" : "2010-09-09",
+    "Description" : "Create a 4 Node Rubrik Cloud Cluster",
+    "Resources" : {
+       "CreateNode01" : {
+            "Type" : "AWS::EC2::Instance",
+            "Properties" : {
+               "Tags" : [ {"Key" : "Name", "Value" : { "Ref" :  "ClusterNameTag" }}],
+               "ImageId" : { "Ref" :  "ImageID"},
+               "InstanceType": "m4.xlarge",
+               "AvailabilityZone" : { "Ref" :  "AvailabilityZone" },
+               "SecurityGroupIds" : { "Ref" : "SecurityGroupIds" },
+               "SubnetId" : { "Ref" : "SubnetId" },
+               "BlockDeviceMappings" : [
+                   {
+                        "DeviceName" : "/dev/sde",
+                        "Ebs" : {
+                            "VolumeType" : "st1",
+                            "Encrypted" : "true",
+                            "DeleteOnTermination" : "true",
+                            "VolumeSize" : "1024"
+                        }
+                    },
+                    {
+                        "DeviceName" : "/dev/sdf",
+                        "Ebs" : {
+                            "VolumeType" : "st1",
+                            "Encrypted" : "true",
+                            "DeleteOnTermination" : "true",
+                            "VolumeSize" : "1024"
+                        }
+                    },
+                    {
+                        "DeviceName" : "/dev/sdg",
+                            "Ebs" : {
+                            "VolumeType" : "st1",
+                            "Encrypted" : "true",
+                            "DeleteOnTermination" : "true",
+                            "VolumeSize" : "1024"
+                        }
+                    }
+                ]
+            }
+       },
+       "CreateNode02" : {
+            "Type" : "AWS::EC2::Instance",
+            "Properties" : {
+               "Tags" : [ {"Key" : "Name", "Value" : { "Ref" :  "ClusterNameTag" }}],
+               "ImageId" : { "Ref" :  "ImageID"},
+               "InstanceType": "m4.xlarge",
+               "AvailabilityZone" : { "Ref" :  "AvailabilityZone" },
+               "SecurityGroupIds" : { "Ref" : "SecurityGroupIds" },
+               "SubnetId" : { "Ref" : "SubnetId" },
+               "BlockDeviceMappings" : [
+                    {
+                        "DeviceName" : "/dev/sde",
+                        "Ebs" : {
+                            "VolumeType" : "st1",
+                            "Encrypted" : "true",
+                            "DeleteOnTermination" : "true",
+                            "VolumeSize" : "1024"
+                        }
+                    },
+                    {
+                        "DeviceName" : "/dev/sdf",
+                        "Ebs" : {
+                            "VolumeType" : "st1",
+                            "Encrypted" : "true",
+                            "DeleteOnTermination" : "true",
+                            "VolumeSize" : "1024"
+                        }
+                    },
+                    {
+                        "DeviceName" : "/dev/sdg",
+                        "Ebs" : {
+                            "VolumeType" : "st1",
+                            "Encrypted" : "true",
+                            "DeleteOnTermination" : "true",
+                            "VolumeSize" : "1024"
+                        }
+                    }
+                ]
+            }
+        },
+       "CreateNode03" : {
+            "Type" : "AWS::EC2::Instance",
+            "Properties" : {
+                "Tags" : [ {"Key" : "Name", "Value" : { "Ref" :  "ClusterNameTag" }}],
+                "ImageId" : { "Ref" :  "ImageID"},
+                "InstanceType": "m4.xlarge",
+                "AvailabilityZone" : { "Ref" :  "AvailabilityZone" },
+                "SecurityGroupIds" : { "Ref" : "SecurityGroupIds" },
+                "SubnetId" : { "Ref" : "SubnetId" },
+                "BlockDeviceMappings" : [
+                    {
+                        "DeviceName" : "/dev/sde",
+                        "Ebs" : {
+                            "VolumeType" : "st1",
+                            "Encrypted" : "true",
+                            "DeleteOnTermination" : "true",
+                            "VolumeSize" : "1024"
+                      }
+                    },
+                    {
+                        "DeviceName" : "/dev/sdf",
+                        "Ebs" : {
+                            "VolumeType" : "st1",
+                            "Encrypted" : "true",
+                            "DeleteOnTermination" : "true",
+                            "VolumeSize" : "1024"
+                        }
+                    },
+                    {
+                        "DeviceName" : "/dev/sdg",
+                        "Ebs" : {
+                            "VolumeType" : "st1",
+                            "Encrypted" : "true",
+                            "DeleteOnTermination" : "true",
+                            "VolumeSize" : "1024"
+                        }
+                    }
+                ]
+            }
+        },
+        "CreateNode04" : {
+            "Type" : "AWS::EC2::Instance",
+            "Properties" : {
+                "Tags" : [ {"Key" : "Name", "Value" : { "Ref" :  "ClusterNameTag" }}],
+                "ImageId" : { "Ref" :  "ImageID"},
+                "InstanceType": "m4.xlarge",
+                "AvailabilityZone" : { "Ref" :  "AvailabilityZone" },
+                "SecurityGroupIds" : { "Ref" : "SecurityGroupIds" },
+                "SubnetId" : { "Ref" : "SubnetId" },
+                "BlockDeviceMappings" : [
+                    {
+                        "DeviceName" : "/dev/sde",
+                        "Ebs" : {
+                            "VolumeType" : "st1",
+                            "Encrypted" : "true",
+                            "DeleteOnTermination" : "true",
+                            "VolumeSize" : "1024"
+                        }
+                    },
+                    {
+                        "DeviceName" : "/dev/sdf",
+                        "Ebs" : {
+                            "VolumeType" : "st1",
+                            "Encrypted" : "true",
+                            "DeleteOnTermination" : "true",
+                            "VolumeSize" : "1024"
+                        }
+                    },
+                    {
+                        "DeviceName" : "/dev/sdg",
+                            "Ebs" : {
+                            "VolumeType" : "st1",
+                            "Encrypted" : "true",
+                            "DeleteOnTermination" : "true",
+                            "VolumeSize" : "1024"
+                        }
+                    }
+                ]
+             }
+        }
+    },
+    "Outputs": {
+        "Node01PrivateIP": {
+            "Description": "Private IP address for Node-01",
+            "Value": {"Fn::GetAtt": ["CreateNode01", "PrivateIp"]}
+      },
+        "Node02PrivateIP": {
+            "Description": "Private IP address for Node-02",
+            "Value": {"Fn::GetAtt": ["CreateNode02", "PrivateIp"]}
+      },
+        "Node03PrivateIP": {
+            "Description": "Private IP address for Node-03",
+            "Value": {"Fn::GetAtt": ["CreateNode03", "PrivateIp"]}
+      },
+        "Node04PrivateIP": {
+            "Description": "Private IP address for Node-04",
+            "Value": {"Fn::GetAtt": ["CreateNode04", "PrivateIp"]}
+      }
+    }
+}
+        
