@@ -39,7 +39,7 @@
         "ImageID" : {
             "Type" : "AWS::EC2::Image::Id",
             "Default" : "ami-6bd0ab13",
-            "Description" : "AMI ID of the Rubrik CloudCluster image shared by Rubrik. Should be something like: rubrik-4-1-1-p2-2263."
+            "Description" : "AMI ID of the Rubrik CloudCluster image shared by Rubrik. The description of the AMI should be something like: rubrik-4-1-1-p2-2263."
         },
         "SecurityGroupIds" : {
             "Type" : "List<AWS::EC2::SecurityGroup::Id>",
@@ -64,7 +64,7 @@
             "Default": "pool.ntp.org"
         },
         "DNSNameServer": {
-            "Description": "The DNS Nameserver server used by the Rubrik Cloud Cluster.",
+            "Description": "The DNS name server server used by the Rubrik Cloud Cluster.",
             "Type": "String",
             "Default": "8.8.8.8"
         },
@@ -296,7 +296,7 @@
                 "AvailabilityZone" : { "Ref" :  "AvailabilityZone" },
                 "SecurityGroupIds" : { "Ref" : "SecurityGroupIds" },
                 "SubnetId" : { "Ref" : "SubnetId" }
-     }
+                }
         }
     },
     "Outputs": {
