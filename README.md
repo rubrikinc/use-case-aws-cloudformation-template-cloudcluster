@@ -1,10 +1,10 @@
 # Use Case: AWS CloudFormation Template for Rubrik CloudCluster
 
-This repository contains a CloudFormation Template designed to help deploy Rubrik CloudCluster in Amazon Web Services. 
+This repository contains a CloudFormation Template designed to help deploy Rubrik Cloud Cluster in Amazon Web Services. 
 
 # :blue_book: Documentation 
 
-Here are some resources to get you started! If you find any challenges from this project are not properly documented or are unclear, please [raise an issue](https://github.com/rubrikinc/use-case-cloudformation-template-cloudcluster/issues/new/choose) and let us know! This is a fun, safe environment - don't worry if you're a GitHub newbie! :heart:
+Here are some resources to get you started! If you find any challenges from this project are not properly documented or are unclear, please [raise an issue](https://github.com/rubrikinc/use-case-aws-cloudformation-template-cloudcluster/issues/new/choose) and let us know! This is a fun, safe environment - don't worry if you're a GitHub newbie! :heart:
 
 * [Quick Start Guide](/docs/quick-start.md) - assists in getting you started
 
