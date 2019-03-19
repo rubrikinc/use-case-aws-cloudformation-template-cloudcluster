@@ -15,7 +15,8 @@ There are a few services you'll need in order to get this project off the ground
 * AWS CloudFormation - this service allows you to configure CloudOut via a template
 * [Template for CloudCluster](rubrik_cloudcluster.template) - template for deploying and configuring Rubrik CloudCluster
 * Rubrik CDM 4.0+ - the platform that protects provisioned workloads
-
+    - AMI Image ID of Rubrik CloudCluster
+    
 # :muscle: How You Can Help
 
 We glady welcome contributions from the community. From updating the documentation to requesting additional templates or use cases, all ideas are welcome. Thank you in advance for all of your issues, pull requests, and comments! :star:
