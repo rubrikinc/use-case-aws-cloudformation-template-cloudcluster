@@ -6,7 +6,7 @@ This repository contains a CloudFormation Template designed to help deploy Rubri
 
 Here are some resources to get you started! If you find any challenges from this project are not properly documented or are unclear, please [raise an issue](https://github.com/rubrikinc/use-case-aws-cloudformation-template-cloudcluster/issues/new/choose) and let us know! This is a fun, safe environment - so don't worry if you're a GitHub newbie! :heart:
 
-* [Quick Start Guide](/docs/quick-start.md) - assists in getting you started
+* [Quick Start Guide](/docs/quick-start.md)
 
 # :white_check_mark: Prerequisites
 
