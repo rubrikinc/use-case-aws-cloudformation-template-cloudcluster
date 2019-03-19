@@ -15,11 +15,11 @@ The end-to-end workflow is as follows:
 
 Navigate to **Services** > **CloudFormation** > **Stacks** and select **Create Stack**. 
 
-![Create a Stack](/docs/img/image1)
+![Create a Stack](/docs/img/image1.png)
 
 Either select **Upload a template to Amazon S3** or, preferably, **Specify an Amazon S3 template URL**. 
 
-![Select Template](/docs/img/image2)
+![Select Template](/docs/img/image2.png)
 
 The template file can be downloaded [here](https://github.com/rubrikinc/cloudformation-template-rubrik-cloudcluster). Alternatively, copy the following URL:
 
@@ -36,7 +36,7 @@ Under **AWS Deployment**, you will need to define the following:
  * SubnetId
  * SecurityGroupIds
 
-![Specify Details](/docs/img/image3)
+![Specify Details](/docs/img/image3.png)
 
 Under **Cloud Cluster Version and Size**, you will need to define the following: 
 
