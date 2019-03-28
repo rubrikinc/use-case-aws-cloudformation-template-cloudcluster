@@ -21,10 +21,10 @@ Either select **Upload a template to Amazon S3** or, preferably, **Specify an Am
 
 ![Select Template](/docs/img/image2.png)
 
-The template file can be downloaded [here](https://github.com/rubrikinc/cloudformation-template-rubrik-cloudcluster). Alternatively, copy the following URL:
+The template file can be downloaded [here](https://s3-us-west-1.amazonaws.com/cloudformation-templates-rubrik-prod/rubrik_cloudcluster.template). Alternatively, copy the following URL:
 
 ```
-<insert link>
+https://s3-us-west-1.amazonaws.com/cloudformation-templates-rubrik-prod/rubrik_cloudcluster.template
 ```
 
 On the **Specify Details** page, enter the **Stack name** and the **Parameters**. 
