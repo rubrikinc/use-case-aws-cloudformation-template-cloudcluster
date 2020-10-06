@@ -20,7 +20,7 @@ jobs:
         architecture: 'x64'
     - name: Copy Template  
       env:
-        FILE: ./rubrik_cloudcluster.templatee
+        FILE: ./rubrik_cloudcluster.template
         AWS_REGION: 'us-west-1'
         S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         S3_KEY: ${{ secrets.S3_KEY }}
