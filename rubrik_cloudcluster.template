@@ -48,8 +48,7 @@
         },
         "SecurityGroupIds" : {
             "Type" : "List<AWS::EC2::SecurityGroup::Id>",
-            "Description" : "Security Group(s) to apply to Rubrik Cloud Cluster."
-        
+            "Description" : "Security Group(s) to apply to Rubrik Cloud Cluster."        
         },
         "SubnetId" : {
             "Type" : "AWS::EC2::Subnet::Id",
