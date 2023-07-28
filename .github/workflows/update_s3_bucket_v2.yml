@@ -6,8 +6,7 @@ on:
     branches:
       - master
     paths:
-      - 'rubrik_cloudout.template'
-      - 'rubrik_cloudout_consolidation.template'
+      - 'rrubrik_cloudcluster.template'
 
 jobs:
   if_merged:
