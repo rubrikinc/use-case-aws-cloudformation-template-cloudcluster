@@ -81,6 +81,7 @@
             "Type": "String"
         }
     },
+
     "Conditions": {
         "4.1" : { "Fn::Equals" : [ {"Ref" : "RubrikCDMVersion"}, "4.1.x" ] },
         "4.2Small" : {
