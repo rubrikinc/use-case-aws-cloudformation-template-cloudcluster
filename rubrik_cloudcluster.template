@@ -103,6 +103,7 @@
             ]
         }
     },
+
     "Resources" : {
         "42CreateSmallNode01" : {
             "Type" : "AWS::EC2::Instance",
