@@ -6,7 +6,7 @@ on:
     branches:
       - master
     paths:
-      - 'rrubrik_cloudcluster.template'
+      - 'rubrik_cloudcluster.template'
 
 jobs:
   if_merged:
